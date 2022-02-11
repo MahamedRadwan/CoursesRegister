@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { StudentsComponent } from './students/students.component';
 import { CoursesComponent } from './courses/courses.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { RegisterStudentComponent } from './register-student/register-student.component';
+import { ReactiveFormsModule } from '@angular/forms'
+import { ExcludeValuePipe } from './pipes/exclude-values';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentsComponent,
     CoursesComponent,
-    NavBarComponent
+    NavBarComponent,
+    RegisterStudentComponent,
+    ExcludeValuePipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
