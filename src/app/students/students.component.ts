@@ -7,9 +7,13 @@ import { StudentsCoursesDataService } from '../students-courses-data.service'
   styleUrls: ['./students.component.scss']
 })
 export class StudentsComponent implements OnInit {
-
-  constructor(private _students: StudentsCoursesDataService,) {}
-  studentData: any = JSON.parse(localStorage.getItem("myStudents") as string);
+  studentData: any;
+  constructor(private _students: StudentsCoursesDataService,) {
+    this.studentData =this._students.students
+  }
+  // studentData: any = JSON.parse(localStorage.getItem("myStudents") as string);
+ 
+  
 
 
   ngOnInit(): void {

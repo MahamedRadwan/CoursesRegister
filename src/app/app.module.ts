@@ -7,8 +7,9 @@ import { StudentsComponent } from './students/students.component';
 import { CoursesComponent } from './courses/courses.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RegisterStudentComponent } from './register-student/register-student.component';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule,FormsModule } from '@angular/forms'
 import { ExcludeValuePipe } from './pipes/exclude-values';
+import { ChartsModule} from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,15 @@ import { ExcludeValuePipe } from './pipes/exclude-values';
     CoursesComponent,
     NavBarComponent,
     RegisterStudentComponent,
-    ExcludeValuePipe
+    ExcludeValuePipe,
+ 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

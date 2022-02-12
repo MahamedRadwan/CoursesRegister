@@ -7,6 +7,7 @@ export class StudentsCoursesDataService {
 
   constructor() { }
   students: object[] = [];
+  registeredCourses: object[] = [];
   courses:object[]=
     [
     { name: 'English', code: 'en1' },
@@ -17,16 +18,12 @@ export class StudentsCoursesDataService {
   addStudent(data: object) {
 
     this.students.push(data);
-    localStorage.setItem("myStudents", JSON.stringify(this.students)); //store students
+    // localStorage.setItem("myStudents", JSON.stringify(this.students)); //store students
     console.log(this.students);
 
 
   };
-
-
-  registeredCourses: object[] = [];
-
-  registerCourses(data: object) {
+  getregisterCoursesdata(data: object) {
 
     this.registeredCourses.push(data);
     console.log(this.registeredCourses);

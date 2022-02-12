@@ -61,13 +61,13 @@ export class RegisterStudentComponent implements OnInit {
     { 
       this.registeredCourses.push({ studentcode: this.code.value, courseName1: this.registerForm.get('course2')?.value })
     }
-    
+    this._StudentCoursesData.getregisterCoursesdata(this.registeredCourses)
     console.log( this.registeredCourses);
     
   }
   addcourses() {
    
-    // this._StudentCoursesData.registerCourses()
+    //
   }
   
 
